@@ -1,9 +1,8 @@
 ---
-layout: post
-title:  "[Database] SQL vs NoSQL"
-subtitle:   "sql nosql의 비교"
-categories: cs
-tags: 데이터베이스
+title: "[Database] SQL vs NoSQL"
+date: 2020-12-13 20:10:00 +0800
+categories: [Computer Science, Database]
+tags: [sql]  
 ---
 
 # SQL 과 NoSQL 의 차이

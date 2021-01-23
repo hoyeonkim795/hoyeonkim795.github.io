@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  "[Network] Blocking Non-Blocking IO"
-subtitle:   "Blocking Non-Blocking IO"
-categories: cs
-tags: 네트워크
+title: "[Network] Blocking Non-Blocking IO"
+date: 2020-12-13 10:10:13 +0800
+categories: [Computer Science, Network]
+tags: [blocking]  
+
 ---
 
  # Blocking I/O & Non-Blocking I/O

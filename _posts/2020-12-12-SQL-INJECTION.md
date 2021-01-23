@@ -1,9 +1,8 @@
 ---
-layout: post
-title:  "[Database] INJECTION"
-subtitle:   "SQL INJECTION"
-categories: cs
-tags: 데이터베이스
+title: "[Database] INJECTION"
+date: 2020-12-12 20:10:13 +0800
+categories: [Computer Science, Database]
+tags: [injection]  
 ---
 
 # SQL INJECTION 이란?
