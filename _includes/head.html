@@ -18,7 +18,15 @@
   {%- endunless -%}
     {{ site.title }}
   </title>
-
+  {% if page.header-img %}
+  <meta property="og:image" content="{{ site.url }}/assets/{{ page.header-img }}">
+  <br/>
+  {% elsif tag.header-img %}
+    <meta property="og:image" content="{{ site.url }}/assets/{{ tag.header-img }}">
+    <br/>
+  {% else %}
+    <meta property="og:image" content="{{ site.url }}/assets/img/logo.png">
+  {% endif %}
   {% include favicons.html %}
 
   <!-- Google Fonts -->
