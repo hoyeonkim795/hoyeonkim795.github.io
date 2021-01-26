@@ -74,8 +74,8 @@ $sidebar-display: "sidebar-display";
   overflow-y: auto;
   width: $sidebar-width-medium;
   z-index: 99;
-  background-image: url("/assets/img/sidebar-bg.jpg");
-  background-color: #00003F;
+  background-image: #00003F, url("https://cdn.pixabay.com/photo/2020/04/30/20/14/sky-5114501_960_720.jpg");
+
   
 
   a {
