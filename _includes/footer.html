@@ -12,10 +12,6 @@
       <p class="mb-0">
         © {{ 'now' | date: "%Y" }}
         <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-        {% if site.data.rights.brief %}
-        <span data-toggle="tooltip" data-placement="top"
-          title="{{ site.data.rights.verbose }}">{{ site.data.rights.brief }}</span>
-        {% endif %}
       </p>
     </div>
 
