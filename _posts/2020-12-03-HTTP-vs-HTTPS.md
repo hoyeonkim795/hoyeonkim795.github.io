@@ -1,5 +1,5 @@
 ---
-title: "[Network] HTTP & HTTPS"
+title: "[Network] HTTP와 HTTPS 개념 및 차이"
 date: 2020-12-03 21:10:13 +0800
 categories: [Computer Science, Network]
 tags: [network]  
