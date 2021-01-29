@@ -1,5 +1,5 @@
 ---
-title: "[Network] 정렬 알고리즘"
+title: "[Web] REST의 특징과 RESTful API"
 date: 2021-01-26 09:12:30 +0800
 categories: [Computer Science, Web]
 tags: [rest api, web, restful api, rest]  
