@@ -14,7 +14,7 @@
     <url>
         {% if page.url != 'norobots' %}
         <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    {   % endif %}
+    {% endif %}
     </url>
     {% endif %}
     {% endif %}
