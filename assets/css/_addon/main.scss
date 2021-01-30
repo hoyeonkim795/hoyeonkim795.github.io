@@ -77,8 +77,6 @@ $sidebar-display: "sidebar-display";
   background-image: url("https://cdn.pixabay.com/photo/2020/04/30/20/14/sky-5114501_960_720.jpg");
   
 
-  
-
   a {
     @include sidebar-links;
     &:hover {
