@@ -74,5 +74,6 @@ const exclude = [
     '{{ site.google_analytics.pv.proxy_url }}',
   {%- endif -%}
   '/assets/js/data/pageviews.json',
-  '/img.shields.io/'
+  '/img.shields.io/',
+  '/assets/js/lib/jquery.disqusloader.min.js'
 ];
