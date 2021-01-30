@@ -10,8 +10,8 @@
 
     {% for page in site.pages %}
     {% if page.layout != nil %}
-    {% if page.layout != 'norobots' %}
     {% if page.layout != 'feed' %}
+    {% if page.url != 'norobots' %}
     <url>
         <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
     </url>
