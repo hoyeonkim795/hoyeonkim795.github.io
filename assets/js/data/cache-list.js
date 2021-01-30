@@ -12,14 +12,6 @@ const include = [
 
   /*--- CSS ---*/
 
-  '{{ "/assets/css/home.css" | relative_url }}',
-  '{{ "/assets/css/categories.css" | relative_url }}',
-  '{{ "/assets/css/tags.css" | relative_url }}',
-  '{{ "/assets/css/archives.css" | relative_url }}',
-  '{{ "/assets/css/page.css" | relative_url }}',
-  '{{ "/assets/css/post.css" | relative_url }}',
-  '{{ "/assets/css/category-tag.css" | relative_url }}',
-  '{{ "/assets/css/lib/bootstrap-toc.min.css" | relative_url }}',
 
   /*--- Javascripts ---*/
 
