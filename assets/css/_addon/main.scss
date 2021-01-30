@@ -55,7 +55,7 @@ body {
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Noto Serif KR','Jua', 'Stylish', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 /*--- sidebar layout ---*/
@@ -435,7 +435,7 @@ $sidebar-display: "sidebar-display";
   display: none;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Noto Serif KR','Jua', 'Stylish', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: var(--topbar-text-color);
   text-align: center;
   width: 70%;
