@@ -10,9 +10,7 @@
 @import "_addon/variables";
 @import "_colors/light-typography";
 @import "_colors/dark-typography";
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;900&family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Stylish&family=Noto+Serif+KR&display=swap');
 
 @mixin mode-toggle($dark-mode: false) {
   @if $dark-mode {
@@ -55,7 +53,7 @@ body {
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Serif KR','Jua', 'Stylish', sans-serif;
 }
 
 /*--- sidebar layout ---*/
@@ -435,7 +433,7 @@ $sidebar-display: "sidebar-display";
   display: none;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Serif KR','Jua', 'Stylish', sans-serif;
   color: var(--topbar-text-color);
   text-align: center;
   width: 70%;
