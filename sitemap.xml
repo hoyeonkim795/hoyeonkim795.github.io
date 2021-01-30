@@ -11,11 +11,11 @@
     {% for page in site.pages %}
     {% if page.layout != nil %}
     {% if page.layout != 'feed' %}
-    {% if page.url != 'norobots' %}
     <url>
+        {% if page.url != 'norobots' %}
         <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+    {   % endif %}
     </url>
-    {% endif %}
     {% endif %}
     {% endif %}
     {% endfor %}
