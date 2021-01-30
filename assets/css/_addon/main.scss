@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@hoyeonkim795 
+youbin-shin
+/
+youbin-shin.github.io
+forked from cotes2020/jekyll-theme-chirpy
+0
+01.3k
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+youbin-shin.github.io/assets/css/_addon/main.scss
+@youbin-shin
+youbin-shin blog | 눈누 인피니티산스 글씨체 추가
+Latest commit 47b3a64 2 days ago
+ History
+ 3 contributors
+@cotes2020@youbin-shin@alexandra-zaharia
+1664 lines (1388 sloc)  28.8 KB
+  
 /*
 * The main styles.
 * v2.0
@@ -11,9 +42,33 @@
 @import "_colors/light-typography";
 @import "_colors/dark-typography";
 
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Stylish&family=Noto+Serif+KR&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;900&display=swap');
 
+// 눈누 폰트 추가
+@font-face {
+  font-family: 'LotteMartHappy';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartHappy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff');
+}
+
+.lottemarthappy * {
+ font-family: 'LotteMartHappy', sans-serif;
+}
+
+@font-face {
+  font-family: 'InfinitySans-BoldA1';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @mixin mode-toggle($dark-mode: false) {
   @if $dark-mode {
@@ -28,6 +83,7 @@
     }
   }
 }
+
 
 html:not([mode]), html[mode=light] {
   @include mode-toggle();
@@ -48,7 +104,7 @@ html[mode=dark] {
 }
 
 :root {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 body {
@@ -56,7 +112,7 @@ body {
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Noto Serif KR','Jua', 'Stylish', sans-serif;
+  font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
 }
 
 /*--- sidebar layout ---*/
@@ -74,10 +130,7 @@ $sidebar-display: "sidebar-display";
   overflow-y: auto;
   width: $sidebar-width-medium;
   z-index: 99;
-  background-image: url("https://cdn.pixabay.com/photo/2020/04/30/20/14/sky-5114501_960_720.jpg");
-  
-
-  
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("https://usercontents-c.styleshare.io/images/31643674/640x-");
 
   a {
     @include sidebar-links;
@@ -89,7 +142,6 @@ $sidebar-display: "sidebar-display";
 
   .site-title {
     a {
-      color: #E7E7E7;
       font-weight: 900;
       font-size: 1.5rem;
       letter-spacing: 0.5px;
@@ -98,7 +150,9 @@ $sidebar-display: "sidebar-display";
 
   .site-subtitle {
     font-size: 95%;
-    color: #f8f9facf;
+    // color: #828282;
+    color: #fff;
+    
     line-height: 1.2rem;
     word-spacing: 1px;
     margin: 0.5rem 1.5rem 0.5rem 1.5rem;
@@ -438,7 +492,7 @@ $sidebar-display: "sidebar-display";
   display: none;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Noto Serif KR','Jua', 'Stylish', sans-serif;
+  font-family: 'LotteMartHappy', sans-serif;
   color: var(--topbar-text-color);
   text-align: center;
   width: 70%;
@@ -631,6 +685,7 @@ footer {
 h1 {
   @extend %heading;
   font-size: 1.8rem;
+  // font-family: 'LotteMartHappy'
 }
 
 h2 {
@@ -1357,6 +1412,7 @@ img {
   #topbar {
     padding: 0;
     max-width: 1070px;
+    font-family: 'LotteMartHappy',
   }
 
   #panel-wrapper {
