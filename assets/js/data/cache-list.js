@@ -27,7 +27,7 @@ const include = [
   '{{ "/assets/js/page.min.js" | relative_url }}',
   '{{ "/assets/js/post.min.js" | relative_url }}',
   '{{ "/assets/js/categories.min.js" | relative_url }}',
-  '{{ "/assets/js/lib/jquery.disqusloader.min.js" | relative_url }}'
+
 
   /*--- HTML ---*/
 
