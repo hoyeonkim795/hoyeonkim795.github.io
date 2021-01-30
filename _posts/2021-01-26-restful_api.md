@@ -9,7 +9,7 @@ tags: [rest api, web, restful api, rest]
 
 # RESTful API
 
-이전 포스트에서 REST API란 무엇인지에 대해 알아보았습니다. 오늘은 REST의 특징 그리고 RESTful API에 대해 알아보겠습니다.😉
+이전 포스트에서 REST API란 무엇인지에 대해 알아보았습니다. 오늘은 REST의 특징 그리고 RESTful API에 대해 알아보겠습니다.
 
 # REST의 특징
 
