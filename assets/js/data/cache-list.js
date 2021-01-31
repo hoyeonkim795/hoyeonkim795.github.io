@@ -75,6 +75,4 @@ const exclude = [
   {%- endif -%}
   '/assets/js/data/pageviews.json',
   '/img.shields.io/',
-  '/assets/js/lib/jquery.disqusloader.min.js',
-  '/_includes/disqus.html'
 ];
