@@ -1,7 +1,7 @@
 ---
 title: "[My project] 취향의 나눔"
 date: 2020-06-17 01:12:30 +0800
-categories: [My_project, 취향의 나눔]
+categories: [My project, 취향의 나눔]
 tags: [ssafy, 취향의 나눔, project]  
 ---
 
