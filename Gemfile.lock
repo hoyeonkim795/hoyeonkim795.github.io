@@ -112,6 +112,11 @@ PLATFORMS
 
 DEPENDENCIES
   html-proofer (~> 3.18)
+  jekyll-archives
+  jekyll-paginate
+  jekyll-redirect-from
+  jekyll-seo-tag
+  jekyll-sitemap
   jekyll-theme-chirpy!
   tzinfo (~> 1.2)
   tzinfo-data
