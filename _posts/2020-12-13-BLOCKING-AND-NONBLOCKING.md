@@ -1,5 +1,5 @@
 ---
-title: "[Network] Blocking Non-Blocking IO"
+title: "[Network] 실생활 예로 이해하는 Blocking Non-Blocking IO"
 date: 2020-12-13 10:10:13 +0800
 categories: [Computer Science, Network]
 tags: [blocking]  
