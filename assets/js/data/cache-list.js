@@ -73,6 +73,8 @@ const exclude = [
   {%- if site.google_analytics.pv.proxy_url and site.google_analytics.pv.enabled -%}
     '{{ site.google_analytics.pv.proxy_url }}',
   {%- endif -%}
+  '/includes/disqus.html',
+  '/assets/js/lib/jquery.disqusloader.min.js',
   '/assets/js/data/pageviews.json',
   '/img.shields.io/',
 ];
