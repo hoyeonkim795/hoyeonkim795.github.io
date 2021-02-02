@@ -1,17 +1,19 @@
 /*
  * Hide Header on scroll down
- * v2.0
- * https://github.com/cotes2020/jekyll-theme-chirpy
- * © 2018-2019 Cotes Chung
- * MIT License
  */
 
 $(function() {
 
-  var didScroll;
-  var lastScrollTop = 0;
-  var delta = 5;
-  var topbarHeight = $("#topbar-wrapper").outerHeight();
+  const topbarWrapper = $("#topbar-wrapper");
+  const toc = $("#toc-wrapper");
+  const access = $(".access");
+  const searchInput = $("#search-input");
+
+  let didScroll;
+  let lastScrollTop = 0;
+
+  const delta = 5;
+  const topbarHeight = topbarWrapper.outerHeight();
 
   function hasScrolled() {
     var st = $(this).scrollTop();
@@ -23,30 +25,28 @@ $(function() {
 
     if (st > lastScrollTop && st > topbarHeight) {
       /* Scroll Down */
-      $("#topbar-wrapper").removeClass("topbar-down").addClass("topbar-up");
+      topbarWrapper.removeClass("topbar-down").addClass("topbar-up");
 
-      if ($("#toc-wrapper").length > 0) {
-        $("#toc-wrapper").removeClass("topbar-down");
+      if (toc.length > 0) {
+        toc.removeClass("topbar-down");
       }
 
-      if ($(".access").length > 0) {
-        $(".access").removeClass("topbar-down");
+      if (access.length > 0) {
+        access.removeClass("topbar-down");
       }
 
-      if ($("#search-input").is(":focus")) {
-        $("#search-input").blur(); /* remove focus */
+      if (searchInput.is(":focus")) {
+        searchInput.blur(); /* remove focus */
       }
 
-    } else {
+    } else if (st + $(window).height() < $(document).height()) {
       /* Scroll Up */
-      if (st + $(window).height() < $(document).height()) {
-        $("#topbar-wrapper").removeClass("topbar-up").addClass("topbar-down");
-        if ($("#toc-wrapper").length > 0) {
-          $("#toc-wrapper").addClass("topbar-down");
-        }
-        if ($(".access").length > 0) {
-          $(".access").addClass("topbar-down");
-        }
+      topbarWrapper.removeClass("topbar-up").addClass("topbar-down");
+      if (toc.length > 0) {
+        toc.addClass("topbar-down");
+      }
+      if (access.length > 0) {
+        access.addClass("topbar-down");
       }
     }
 

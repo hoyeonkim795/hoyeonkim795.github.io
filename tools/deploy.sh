@@ -1,11 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Deploy the content of _site to 'origin/<pages_branch>'
-#
-# v2.5
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2020 Cotes Chung
-# Published under MIT License
 
 set -eu
 
@@ -21,7 +16,8 @@ init() {
   fi
 
   # Gemfile could be changed by `bundle install` in actions workflow
-  if [[ -n $(git status Gemfile.lock --porcelain) ]]; then
+  if [[ -n $(git ls-files | grep Gemfile.lock) && -n \
+  $(git status Gemfile.lock --porcelain) ]]; then
     git checkout -- Gemfile.lock
   fi
 
