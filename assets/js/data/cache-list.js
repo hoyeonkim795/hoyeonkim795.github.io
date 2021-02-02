@@ -2,18 +2,32 @@
 layout: compress
 
 # The list to be cached by PWA
+# Chirpy v2.2
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2020 Cotes Chung
+# MIT Licensed
 ---
 
 const include = [
 
   /*--- CSS ---*/
-  '{{ "/assets/css/style.css" | relative_url }}',
+
+  '{{ "/assets/css/home.css" | relative_url }}',
+  '{{ "/assets/css/categories.css" | relative_url }}',
+  '{{ "/assets/css/tags.css" | relative_url }}',
+  '{{ "/assets/css/archives.css" | relative_url }}',
+  '{{ "/assets/css/page.css" | relative_url }}',
+  '{{ "/assets/css/post.css" | relative_url }}',
+  '{{ "/assets/css/category-tag.css" | relative_url }}',
+  '{{ "/assets/css/lib/bootstrap-toc.min.css" | relative_url }}',
 
   /*--- Javascripts ---*/
-  '{{ "/assets/js/dist/home.min.js" | relative_url }}',
-  '{{ "/assets/js/dist/page.min.js" | relative_url }}',
-  '{{ "/assets/js/dist/post.min.js" | relative_url }}',
-  '{{ "/assets/js/dist/categories.min.js" | relative_url }}',
+
+  '{{ "/assets/js/home.min.js" | relative_url }}',
+  '{{ "/assets/js/page.min.js" | relative_url }}',
+  '{{ "/assets/js/post.min.js" | relative_url }}',
+  '{{ "/assets/js/categories.min.js" | relative_url }}',
+
 
   /*--- HTML ---*/
 
@@ -51,7 +65,6 @@ const include = [
 
   '{{ "/assets/js/data/search.json" | relative_url }}',
   '{{ "/404.html" | relative_url }}',
-
   '{{ "/app.js" | relative_url }}',
   '{{ "/sw.js" | relative_url }}'
 ];
@@ -61,5 +74,5 @@ const exclude = [
     '{{ site.google_analytics.pv.proxy_url }}',
   {%- endif -%}
   '/assets/js/data/pageviews.json',
-  '/img.shields.io/'
+  '/img.shields.io/',
 ];
