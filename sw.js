@@ -30,6 +30,23 @@ self.addEventListener('install', (e) => {
 });
 
 
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    caches.match(e.request).then((r) => {
+      /* console.log('[Service Worker] Fetching resource: ' + e.request.url); */
+      return r || fetch(e.request).then((response) => {
+        return caches.open(cacheName).then((cache) => {
+          if (!isExcluded(e.request.url)) {
+            /* console.log('[Service Worker] Caching new resource: ' + e.request.url); */
+            cache.add(e.request, response.clone());
+          }
+          return response;
+        });
+      });
+    })
+  );
+});
+
 
 self.addEventListener('activate', (e) => {
   e.waitUntil(
