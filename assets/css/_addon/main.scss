@@ -825,6 +825,10 @@ img {
   margin-top: 2rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  -webkit-user-select: none !important;
+  -moz-user-select: -moz-none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
 
   img[data-src] {
     margin: 0.5rem 0;
@@ -885,10 +889,6 @@ img {
   p {
     font-size: 1.08rem;
     @include img(true);
-    -webkit-user-select: none !important;
-    -moz-user-select: -moz-none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
   }
 
   ul {
