@@ -30,11 +30,11 @@ tags: [뮤텍스, 세마포어, 데커 알고리즘, 피터슨 알고리즘, 제
 
 뮤텍스를 보다 쉽게 실생활 예로 생각해보자, 뮤텍스는 `화장실이 하나 뿐이 없는 식당` 과 비슷하다.
 
-![Untitled](\assets\img\mutex\Untitled.png)
+![Untitled](\assets\img\mutex\Untitled.png style="height:50%; max-width:50%;")
 
-![Untitled 1](\assets\img\mutex\Untitled 1.png)
+![Untitled 1](\assets\img\mutex\Untitled 1.png style="height:50%; max-width:50%;")
 
-![Untitled 2](\assets\img\mutex\Untitled 2.png)
+![Untitled 2](\assets\img\mutex\Untitled 2.png style="height:50%; max-width:50%;")
 
 프로세스(사람) 은 자원에 접근하기 위해서는 열쇠(lock)을 얻고 화장실(자원)을 쓴다. 그리고 다쓰고 키(unlock)를 반납한다.
 
@@ -120,9 +120,11 @@ number[i] = 0; // 임계 구역 사용 종료
 
 이또한, 위의 뮤텍스와 같이 실생활 예로 살펴보자.
 
-![Untitled 3](\assets\img\mutex\Untitled 3.png)
+![Untitled 3](\assets\img\mutex\Untitled 3.png style="height:50%; max-width:50%;")
 
-![Untitled 4](\assets\img\mutex\Untitled 4.png)![Untitled 5](\assets\img\mutex\Untitled 5.png)
+![Untitled 4](\assets\img\mutex\Untitled 4.png style="height:50%; max-width:50%;")
+
+![Untitled 5](\assets\img\mutex\Untitled 5.png style="height:50%; max-width:50%;")
 
 위의 그림은 **카운팅 세마포어(counting semaphore)**를 쉽게 이해할 수 있는 예시이다. 즉, 유한한 개수를 가진 자원에 대한 접근을 제어하는데 사용할 수 있다. 그리고 다른 방법은 **이진 세마포어(binary semaphore)** 가 있다.  세마포어의 초기 값이 0또는 1만 가질 수 있는 세마포어 이다. (뮤텍스가 이진 세마포어와 비슷한 것이라 생각하면 된다)
 
