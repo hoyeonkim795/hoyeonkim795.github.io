@@ -71,6 +71,6 @@ tags: [normalization, 정규화, 정규화 장점, 정규화 단점, 함수적 �
 
 <img src="\assets\img\normalization2\Untitled.png" alt="Untitled" style="width:60%; height:60%"/>
 
-위의 릴레이션에서 Model 속성과 Manufacturer를 알면 Model Full Name 속성을 참조하지 않아도 값을 알 수 있다. 하지만 때문에 Model Fu**ll Name는 Model과 Manufacturer에 대해 **완전 함수적 종속**이다.
+위의 릴레이션에서 Model 속성과 Manufacturer를 알면 Model Full Name 속성을 참조하지 않아도 값을 알 수 있다. 하지만 때문에 Model Full Name는 Model과 Manufacturer에 대해 **완전 함수적 종속**이다.
 
 그리고, Manufaturer Country는 사실 Manufacture와만 종속관계에 있고 Model과는 아무런 연관이 없기 때문에 이를 **부분 함수 종속** 이라 한다.
