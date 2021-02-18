@@ -1,11 +1,10 @@
----
-title: "[Database] 데이터베이스의 이상현상"
-date: 2020-12-14 10:01:00 +0800
-categories: [Computer Science, Database]
-tags: [anomaly]  
----
+# 이상현상(Anomaly)
 
-# 이상 현상(Anomaly)
+Created: 2020년 12월 17일 오후 5:53
+Created By: 호연 김
+Last Edited Time: 2021년 1월 4일 오후 10:21
+
+# **이상 현상(Anomaly)**
 
 잘못된 테이블 설계로 인해 Anomaly(이상현상)이 나타난다. 이런 이상 현상은 크게 **갱신 이상(Modification Anomaly), 삽입 이상(Insertion Anomaly), 삭제 이상(Deletion Anomaly)** 으로 구성된다. 각각을 간략하게 설명하자면,
 
@@ -29,26 +28,26 @@ tags: [anomaly]
 
 1. 삽입이상
 
-![Untitled](assets\img\anomaly\Untitled.png)
+![%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled.png](%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled.png)
 
 새로운 학생 데이터 삽입
 
 기본키가 null 이발생
 
-![Untitled 1](\assets\img\anomaly\Untitled 1.png)
+![%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%201.png](%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%201.png)
 
 2. 갱신이상
 
-![Untitled 2](\assets\img\anomaly\Untitled 2.png)
+![%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%202.png](%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%202.png)
 
 맨 위에 데이터 주소 갱신 다른 데이터 갱신이안됨
 
-![Untitled 3](\assets\img\anomaly\Untitled 3.png)
+![%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%203.png](%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%203.png)
 
 3. 삭제이상
 
-![Untitled 4](\assets\img\anomaly\Untitled 4.png)
+![%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%204.png](%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%204.png)
 
 0002 과목이 수강 취소 됨 해당 데이터까지 삭제됨
 
-![Untitled 5](\assets\img\anomaly\Untitled 5.png)
+![%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%205.png](%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A1%E1%86%BC(Anomaly)%20c5c362c061b5422a9c02ce81cc7dea64/Untitled%205.png)
