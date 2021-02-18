@@ -1,6 +1,6 @@
 ---
 title: "[Database] 정규화(Normalization)"
-date: 2020-02-07 13:30:00 +0800
+date: 2021-02-07 13:30:00 +0800
 categories: [Computer Science, Database]
 tags: [normalization, 정규화, 정규화 장점, 정규화 단점, 함수적 종속]
 ---
@@ -61,7 +61,7 @@ tags: [normalization, 정규화, 정규화 장점, 정규화 단점, 함수적 �
 제 BCNF화 : 결정자이면서 후보키가 아닌 것들 제거
 제 4정규화 : 다치 종속 제거
 
-각 정규화의 과정에 대해 더 자세히 알아보고 싶다면, [정규화](https://hoyeonkim795.github.io/) 과정 링크를 참고하자.
+각 정규화의 과정에 대해 더 자세히 알아보고 싶다면, [정규화](https://hoyeonkim795.github.io/posts/normalization-course) 과정 링크를 참고하자.
 
 ## 함수적 종속성이란
 
