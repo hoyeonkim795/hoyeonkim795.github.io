@@ -1,4 +1,4 @@
-```
+```yaml
 title: "[CS 면접] 네트워크 CS 면접 질문 리스트"
 date: 2021-02-09 21:30:00 +0800
 categories: [Computer Science, Job Interview Questions]
