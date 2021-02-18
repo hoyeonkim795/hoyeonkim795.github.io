@@ -30,17 +30,11 @@ tags: [뮤텍스, 세마포어, 데커 알고리즘, 피터슨 알고리즘, 제
 
 뮤텍스를 보다 쉽게 실생활 예로 생각해보자, 뮤텍스는 `화장실이 하나 뿐이 없는 식당` 과 비슷하다.
 
+```html
+<img src="\assets\img\mutex\Untitled.png" alt="Untitled" style="width:50%; height:50%"/>
+<img src="\assets\img\mutex\Untitled 1.png" alt="Untitled 1" style="width:50%; height:50%"/>
+<img src="\assets\img\mutex\Untitled 2.png" alt="Untitled 2" style="width:50%; height:50%"/>
 ```
-<img src="Untitled.png" alt="Untitled" style="width:50%; height:50%"/>
-<img src="Untitled 1.png" alt="Untitled 1" style="width:50%; height:50%"/>
-<img src="Untitled 2.png" alt="Untitled 2" style="width:50%; height:50%"/>
-```
-
-![Untitled](\assets\img\mutex\Untitled.png)
-
-![Untitled 1](\assets\img\mutex\Untitled 1.png)
-
-![Untitled 2](\assets\img\mutex\Untitled 2.png)
 
 프로세스(사람) 은 자원에 접근하기 위해서는 열쇠(lock)을 얻고 화장실(자원)을 쓴다. 그리고 다쓰고 키(unlock)를 반납한다.
 
