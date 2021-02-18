@@ -11,7 +11,7 @@ tags: [뮤텍스, 세마포어, 데커 알고리즘, 피터슨 알고리즘, 제
 
 ***뮤텍스와 세마포어의 정의 그리고 뮤텍스의 세가지 알고리즘(데커, 피터슨, 베이커리) 그리고 뮤텍스와 세마포어의 차이점 까지 알아보자.😉***
 
-여러 프로세스가 동시에 공유 데이터에 접근할 때 접근 순서에 따라 실행 결과가 달라지는 상황에 높인 프로세스들을 **경쟁 상태 (reace condition)**에 있다고 한다. 이러한 경쟁 상태를 예방하려면 병행 프로세스들을 동기화해야 하는데, 이는 임계 영역을 이용한 **상호배제**로 구현할 수 있다. 
+여러 프로세스가 동시에 공유 데이터에 접근할 때 접근 순서에 따라 실행 결과가 달라지는 상황에 놓인 프로세스들을 **경쟁 상태 (reace condition)**에 있다고 한다. 이러한 경쟁 상태를 예방하려면 병행 프로세스들을 동기화해야 하는데, 이는 임계 영역을 이용한 **상호배제**로 구현할 수 있다. 
 
 임계 영역 
 
@@ -30,11 +30,9 @@ tags: [뮤텍스, 세마포어, 데커 알고리즘, 피터슨 알고리즘, 제
 
 뮤텍스를 보다 쉽게 실생활 예로 생각해보자, 뮤텍스는 `화장실이 하나 뿐이 없는 식당` 과 비슷하다.
 
-```html
 <img src="\assets\img\mutex\Untitled.png" alt="Untitled" style="width:50%; height:50%"/>
 <img src="\assets\img\mutex\Untitled 1.png" alt="Untitled 1" style="width:50%; height:50%"/>
 <img src="\assets\img\mutex\Untitled 2.png" alt="Untitled 2" style="width:50%; height:50%"/>
-```
 
 프로세스(사람) 은 자원에 접근하기 위해서는 열쇠(lock)을 얻고 화장실(자원)을 쓴다. 그리고 다쓰고 키(unlock)를 반납한다.
 
@@ -120,11 +118,9 @@ number[i] = 0; // 임계 구역 사용 종료
 
 이또한, 위의 뮤텍스와 같이 실생활 예로 살펴보자.
 
-![Untitled 3](\assets\img\mutex\Untitled 3.png)
-
-![Untitled 4](\assets\img\mutex\Untitled 4.png)
-
-![Untitled 5](\assets\img\mutex\Untitled 5.png)
+<img src="\assets\img\mutex\Untitled 3.png" alt="Untitled 3" style="width:50%; height:50%"/>
+<img src="\assets\img\mutex\Untitled 4.png" alt="Untitled 4" style="width:50%; height:50%"/>
+<img src="\assets\img\mutex\Untitled 5.png" alt="Untitled 5" style="width:50%; height:50%"/>
 
 위의 그림은 **카운팅 세마포어(counting semaphore)**를 쉽게 이해할 수 있는 예시이다. 즉, 유한한 개수를 가진 자원에 대한 접근을 제어하는데 사용할 수 있다. 그리고 다른 방법은 **이진 세마포어(binary semaphore)** 가 있다.  세마포어의 초기 값이 0또는 1만 가질 수 있는 세마포어 이다. (뮤텍스가 이진 세마포어와 비슷한 것이라 생각하면 된다)
 
