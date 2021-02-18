@@ -30,7 +30,13 @@ tags: [뮤텍스, 세마포어, 데커 알고리즘, 피터슨 알고리즘, 제
 
 뮤텍스를 보다 쉽게 실생활 예로 생각해보자, 뮤텍스는 `화장실이 하나 뿐이 없는 식당` 과 비슷하다.
 
-![Untitled height="50%" width="50%"](\assets\img\mutex\Untitled.png)
+```
+<img src="Untitled.png" alt="Untitled" style="width:50%; height:50%"/>
+<img src="Untitled 1.png" alt="Untitled 1" style="width:50%; height:50%"/>
+<img src="Untitled 2.png" alt="Untitled 2" style="width:50%; height:50%"/>
+```
+
+![Untitled](\assets\img\mutex\Untitled.png)
 
 ![Untitled 1](\assets\img\mutex\Untitled 1.png)
 
