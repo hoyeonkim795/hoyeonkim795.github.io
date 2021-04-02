@@ -1,12 +1,9 @@
 #  The contact options.
-#  v2.3
-#  https://github.com/cotes2020/jekyll-theme-chirpy
-#  © 2020 Cotes Chung
-#  MIT Licensed
 
 -
   type: github
   icon: 'fab fa-github-alt'
+  
 -
   type: email
   icon: 'fas fa-envelope'
@@ -15,9 +12,6 @@
   type: rss
   icon: 'fas fa-rss'
   noblank: true
-# -
-#   type: twitter
-#   icon: 'fab fa-twitter'
 
 # Uncomment and complete the url below to enable more contact options
 # -
