@@ -1,6 +1,10 @@
 ---
 layout: default
 # The posts' layout
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT Licensed
 ---
 
 <div class="row">
@@ -14,18 +18,19 @@ layout: default
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
         <div>
-          <span class="semi-bold">
-            {{ page.author | default: site.social.name }}
+          {% include timeago.html date=page.date tooltip=true %}
+          by
+          <span class="author">
+            {{ page.author | default: site.author }}
           </span>
-          {% include timeago.html date=page.date prep="on" tooltip=true %}
         </div>
 
         <div>
           <!-- lastmod -->
           {% if page.last_modified_at %}
           <span>
-            {% include timeago.html date=page.last_modified_at
-              class="lastmod" prefix="Updated" tooltip=true %}
+            Updated
+            {% include timeago.html date=page.last_modified_at class="lastmod" tooltip=true %}
           </span>
           {% endif %}
 
@@ -44,7 +49,7 @@ layout: default
       <div class="post-content">
 
         {% if page.image.src %}
-          <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt | default: "Preview Image" }}">
+        <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt | default: "Preview Image" }}">
         {% endif %}
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -58,6 +63,7 @@ layout: default
         <script>
             window.onload = function() {(adsbygoogle = window.adsbygoogle || []).push({})};
         </script>
+    
 
         {{ content }}
 
@@ -121,6 +127,7 @@ layout: default
 
   </div> <!-- #post-wrapper -->
 
+
   {% assign enable_toc = false %}
 
   {% if site.toc and page.toc %}
@@ -132,6 +139,7 @@ layout: default
   {% include panel.html toc=enable_toc %}
 
 </div> <!-- .row -->
+
 
 <div class="row">
   <div class="col-12 col-lg-11 col-xl-8">

@@ -1,28 +1,34 @@
 /*
 * This script make #search-result-wrapper switch to unloaded or shown automatically.
+* v2.0
+* https://github.com/cotes2020/jekyll-theme-chirpy
+* © 2018-2019 Cotes Chung
+* MIT License
 */
 
 $(function() {
 
-  const btnSbTrigger = $("#sidebar-trigger");
-  const btnSearchTrigger = $("#search-trigger");
-  const btnCancel = $("#search-cancel");
-  const btnClear = $("#search-cleaner");
+  var btnSbTrigger = $("#sidebar-trigger");
+  var btnSearchTrigger = $("#search-trigger");
+  var btnCancel = $("#search-cancel");
+  var btnClear = $("#search-cleaner");
 
-  const main = $("#main");
-  const topbarTitle = $("#topbar-title");
-  const searchWrapper = $("#search-wrapper");
-  const resultWrapper = $("#search-result-wrapper");
-  const results = $("#search-results");
-  const input = $("#search-input");
-  const hints = $("#search-hints");
+  var main = $("#main");
+  var topbarTitle = $("#topbar-title");
+  var searchWrapper = $("#search-wrapper");
+  var resultWrapper = $("#search-result-wrapper");
+  var results = $("#search-results");
+  var input = $("#search-input");
+  var hints = $("#search-hints");
 
-  const scrollBlocker = (function () {
-    let offset = 0;
+
+  /*--- Actions in small screens (Sidebar unloaded) ---*/
+
+  var scrollBlocker = (function() {
+    var offset = 0;
     return {
       block() {
-        offset = window.scrollY;
-        $("html,body").scrollTop(0);
+        offset = $(window).scrollTop();
       },
       release() {
         $("html,body").scrollTop(offset);
@@ -33,10 +39,7 @@ $(function() {
     };
   }());
 
-
-  /*--- Actions in small screens (Sidebar unloaded) ---*/
-
-  const mobileSearchBar = (function () {
+  var mobileSearchBar = (function() {
     return {
       on() {
         btnSbTrigger.addClass("unloaded");
@@ -55,38 +58,37 @@ $(function() {
     };
   }());
 
-  const resultSwitch = (function () {
-    let visible = false;
+  var resultSwitch = (function() {
+    var visable = false;
 
     return {
       on() {
-        if (!visible) {
-          // the block method must be called before $(#main) unloaded.
-          scrollBlocker.block();
+        if (!visable) {
           resultWrapper.removeClass("unloaded");
-          main.addClass("unloaded");
-          visible = true;
+          main.addClass("hidden");
+
+          visable = true;
+          scrollBlocker.block();
         }
       },
       off() {
-        if (visible) {
+        if (visable) {
           results.empty();
           if (hints.hasClass("unloaded")) {
             hints.removeClass("unloaded");
           }
           resultWrapper.addClass("unloaded");
-          btnClear.removeClass("visible");
-          main.removeClass("unloaded");
-
-          // now the release method must be called after $(#main) display
-          scrollBlocker.release();
+          btnClear.removeClass("visable");
+          main.removeClass("hidden");
 
           input.val("");
-          visible = false;
+          visable = false;
+
+          scrollBlocker.release();
         }
       },
-      isVisible() {
-        return visible;
+      isVisable() {
+        return visable;
       }
     };
 
@@ -128,7 +130,7 @@ $(function() {
         resultSwitch.on();
 
         if (!btnClear.hasClass("visible")) {
-          btnClear.addClass("visible");
+          btnClear.addClass("visable");
         }
 
         if (isMobileView()) {
@@ -147,7 +149,7 @@ $(function() {
       resultSwitch.off();
     }
     input.focus();
-    btnClear.removeClass("visible");
+    btnClear.removeClass("visable");
   });
 
 });
