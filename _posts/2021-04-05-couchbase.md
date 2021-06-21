@@ -1,7 +1,7 @@
 ---
 title: "[Database] 카우치베이스(Couchbase)"
 date: 2021-04-05 18:13:40 +0800
-categories: [Computer Science, Database, NoSQL]
+categories: [Computer Science, Database]
 tags: [카우치베이스, couchbase, database, NoSQL]
 ---
 
