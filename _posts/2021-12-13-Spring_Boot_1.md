@@ -1,7 +1,7 @@
 ---
-title: "[Web] Spring Boot 강의 정리 1"
+title: "[Framework] Spring Boot 강의 정리"
 date: 2021-12-13 13:21:40 +0800
-categories: [Web]
+categories: [Framework, SpringBoot]
 tags: [springBoot, annotation]
 ---
 
