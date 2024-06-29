@@ -10,7 +10,7 @@ tags: [c++]
 ```c++
 void print() const
 {
-	x = 10;
+	x = 20;
 }
 ```
 
