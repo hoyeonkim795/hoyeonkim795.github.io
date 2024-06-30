@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://hoyeonkim795.github.io/sitemap.xml
